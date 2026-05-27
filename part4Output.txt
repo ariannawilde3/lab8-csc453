@@ -1,0 +1,16 @@
+=== Part 4: File Operations: The Syscall Interface ===
+
+Experiment A: Sequential write / read with syscalls
+
+after writing "ABCDEFGH": offset = 8
+Read 4 bytes from start: "ABCD"  offset = 4
+After seeking to byte 2: "CDEF"
+
+Experiment B: Sparse files (holes)
+
+File size: 1048577 bytes
+Blocks (512B): 16
+Actual disk use: 8192 bytes
+Byte at offset 0: 'A' (65)
+Byte at offset 500: 0
+Byte at offset 1048576: 'Z' (90)

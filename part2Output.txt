@@ -1,0 +1,18 @@
+=== Part 2: Hard Links and Soft Links ===
+
+Original file:
+  original        inode=24        links=1   size=32      type=regular
+  original        contents: "Hello from the file system lab!"
+
+after creating hard link: 
+  original        inode=24        links=2   size=32      type=regular
+  hard link       inode=24        links=2   size=32      type=regular
+
+ after creating the soft linke: 
+  softlink        inode=31        links=1   size=24      type=symlink
+
+ after deleting the original file: 
+  hardlink        contents: "Hello from the file system lab!"
+  softlink        open failed: No such file or directory
+  hardlink        inode=24        links=1   size=32      type=regular
+  softlink        inode=31        links=1   size=24      type=symlink

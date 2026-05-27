@@ -1,0 +1,24 @@
+=== Part 1: Inodes: The Real Identity of a File ===
+
+File: /tmp/fs_lab/original.txt
+
+  Inode number:    16
+  Link count:      1
+  Size (bytes):    32
+  Block size:      4096
+  Blocks (512B):   8
+  Permissions:     0644
+  Device:          32
+
+After creating hard link '/tmp/fs_lab/hardlink.txt':
+
+  original        inode=16        links=2   size=32      type=regular
+  hardlink        inode=16        links=2   size=32      type=regular
+
+  Same inode? YES  (original=16, hardlink=16)
+  Link count now: 2
+
+After removing hard link:
+
+  original        inode=16        links=1   size=32      type=regular
+  Link count back to: 1

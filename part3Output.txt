@@ -1,0 +1,19 @@
+=== Part 3: Reading Directories ===
+
+Listing contents of: /tmp/fs_lab/subdir
+
+  .               inode=34        links=2   size=140     type=directory
+  ..              inode=32        links=3   size=80      type=directory
+  file4.txt       inode=39        links=1   size=19      type=regular
+  file3.txt       inode=38        links=1   size=19      type=regular
+  file2.txt       inode=37        links=1   size=19      type=regular
+  file1.txt       inode=36        links=1   size=19      type=regular
+  file0.txt       inode=35        links=1   size=19      type=regular
+Total entries: 7
+
+Examining '.' and '..' in /tmp/fs_lab/subdir:
+
+  /tmp/fs_lab/subdir  inode = 34
+  /tmp/fs_lab/subdir/.  inode = 34
+  /tmp/fs_lab/subdir/..  inode = 32
+  /tmp/fs_lab         inode = 32
